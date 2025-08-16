@@ -29,8 +29,8 @@ export default function HomePage() {
           </div>
           <div className="flex flex-1 justify-end gap-8">
             <div className="flex items-center gap-9">
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Home</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Conferences</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Conferences</a>
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">About</a>
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Contact</a>
             </div>
