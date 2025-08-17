@@ -133,10 +133,10 @@ const Events = () => {
           <div className="flex flex-1 justify-end gap-8">
             <div className="flex items-center gap-9">
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">About</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Events</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/aboutus">About</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Events</a>
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Resources</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Contact</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/contact">Contact</a>
             </div>
             <div className="flex gap-2">
               <button

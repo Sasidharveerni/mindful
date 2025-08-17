@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden"
@@ -31,14 +33,14 @@ export default function HomePage() {
             <div className="flex items-center gap-9">
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
               <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Conferences</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">About</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Contact</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/aboutus">About</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/contact">Contact</a>
             </div>
             <div className="flex gap-2">
               <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Book Now</span>
               </button>
-              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f4efe7] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]">
+              <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f4efe7] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]" onClick={() => navigate('/login')}>
                 <span className="truncate">Login</span>
               </button>
             </div>
