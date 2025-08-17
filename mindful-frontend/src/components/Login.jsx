@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function Login() {
+
+    const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -47,10 +51,10 @@ export default function Login() {
         </div>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium text-[#1c160d]">
-          <a href="/">Home</a>
-          <a href="/events">Events</a>
-          <a href="/aboutus">About Us</a>
-          <a href="/contact">Contact</a>
+          <a onClick={() => navigate('/')}>Home</a>
+          <a onClick={() => navigate('/events')}>Events</a>
+          <a onClick={() => navigate('/aboutus')}>About Us</a>
+          <a onClick={() => navigate('/contact')}>Contact</a>
         </nav>
 
         <button className="ml-4 rounded-lg h-10 px-4 bg-[#f4efe7] text-[#1c160d] font-bold text-sm">

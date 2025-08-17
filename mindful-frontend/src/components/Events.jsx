@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
 const Events = () => {
+  const navigate = useNavigate();
   // Mock data - replace with your actual data fetching logic
   const mockEvents = [
     {
@@ -132,11 +134,11 @@ const Events = () => {
           </div>
           <div className="flex flex-1 justify-end gap-8">
             <div className="flex items-center gap-9">
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/aboutus">About</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Events</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="#">Resources</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/contact">Contact</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/')}>Home</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/aboutus')}>About</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/events')}>Events</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/resources')}>Resources</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/contact')}>Contact</a>
             </div>
             <div className="flex gap-2">
               <button

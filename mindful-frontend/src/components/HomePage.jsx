@@ -31,10 +31,10 @@ export default function HomePage() {
           </div>
           <div className="flex flex-1 justify-end gap-8">
             <div className="flex items-center gap-9">
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Conferences</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/aboutus">About</a>
-              <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/contact">Contact</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/')}>Home</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/events')}>Conferences</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/aboutus')}>About</a>
+              <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/contact')}>Contact</a>
             </div>
             <div className="flex gap-2">
               <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]">
@@ -245,12 +245,12 @@ export default function HomePage() {
               <div className="flex max-w-[960px] flex-1 flex-col">
                 <footer className="flex flex-col gap-6 px-5 py-10 text-center @container">
                   <div className="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">Home</a>
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">Conferences</a>
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">About</a>
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/')}>Home</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/events')}>Conferences</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/aboutus')}>About</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/contact')}>Contact</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/privacy')}>Privacy Policy</a>
+                    <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/terms')}>Terms of Service</a>
                   </div>
 
                   <div className="flex flex-wrap justify-center gap-4">
