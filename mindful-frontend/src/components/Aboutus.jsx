@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import logo from '../assets/icon-logo.png'
+import Header from './Header';
 
 const Aboutus = () => {
     const navigate = useNavigate();
@@ -8,29 +10,8 @@ const Aboutus = () => {
          style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}>
       
       {/* Header */}
-      <header className="flex flex-col md:flex-row items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4efe7] px-4 md:px-10 py-3">
-        <div className="flex items-center gap-4 text-[#1c160d] mb-4 md:mb-0">
-          <div className="size-4">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
-            </svg>
-          </div>
-          <h2 className="text-[#1c160d] text-lg font-bold leading-tight tracking-[-0.015em]">Mindful Oasis</h2>
-        </div>
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
-          <div className="flex flex-wrap justify-center gap-4 md:gap-9">
-            <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/')}>Home</a>
-            <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/events')}>Events</a>
-            <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/aboutus')}>About Us</a>
-            <a className="text-[#1c160d] text-sm font-medium leading-normal" onClick={() => navigate('/contact')}>Contact</a>
-          </div>
-          <button
-            className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em] mt-2 md:mt-0"
-          >
-            <span className="truncate">Book Now</span>
-          </button>
-        </div>
-      </header>
+      
+      <Header />
 
       {/* Main Content */}
       <div className="px-4 md:px-40 flex flex-1 justify-center py-5">
@@ -38,22 +19,19 @@ const Aboutus = () => {
           
           {/* Title Section */}
           <div className="flex flex-wrap justify-between gap-3 p-4">
-            <h1 className="text-[#1c160d] tracking-light text-2xl md:text-[32px] font-bold leading-tight min-w-72">About Mindful Oasis</h1>
+            <h1 className="text-[#1c160d] tracking-light text-2xl md:text-[32px] font-bold leading-tight min-w-72">About ICON STAR CONFERENCES </h1>
           </div>
           
           {/* Introduction */}
           <p className="text-[#1c160d] text-base font-normal leading-normal pb-3 pt-1 px-4">
-            Mindful Oasis was founded with a vision to transform mental health support in Dubai. Inspired by the city's resilience and growth, we aim to create a sanctuary for
-            mental wellness, offering access to world-class conferences and resources. Our platform is a bridge connecting individuals with leading experts, fostering a community
-            of understanding and support.
+           Welcome to ICON STAR CONFERENCES the premier destination for ambitious entrepreneurs, innovative startups, and visionary small business owners ready to scale new heights.
+           At ICON STAR CONFERENCE we are passionate about empowering the next generation of business leaders. Our mission is to provide a transformative platform where dynamic ideas and actionable strategies converge. As the essential business-to-business event of the year, we are dedicated to creating an environment that fosters growth, collaboration, and success.
           </p>
           
           {/* Mission Section */}
-          <h2 className="text-[#1c160d] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Mission</h2>
+          <h2 className="text-[#1c160d] text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Vision</h2>
           <p className="text-[#1c160d] text-base font-normal leading-normal pb-3 pt-1 px-4">
-            Our mission is to empower individuals on their mental health journey by providing access to high-quality conferences and resources. We strive to break down barriers
-            to mental health support, ensuring everyone has the opportunity to thrive. We are committed to fostering a culture of openness, understanding, and proactive mental
-            wellness.
+           At ICON STAR CONFERENCES our vision is to create a vibrant ecosystem where innovative ideas flourish and entrepreneurial dreams become reality. We aim to be the catalyst for transformative growth by connecting visionaries with the resources, knowledge, and networks essential for success. Our goal is to inspire and empower a new generation of business leaders who are ready to shape the future.
           </p>
           
           {/* Team Section */}

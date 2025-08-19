@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import logo from '../assets/icon-logo.png'
+import Header from "./Header";
 
 export default function Login() {
 
@@ -33,34 +35,8 @@ export default function Login() {
       className="min-h-screen flex flex-col bg-[#fcfaf8] font-['Plus_Jakarta_Sans','Noto_Sans',sans-serif]"
     >
       {/* Header */}
-      <header className="flex items-center justify-between border-b border-[#f4efe7] px-6 sm:px-10 py-3">
-        <div className="flex items-center gap-3 text-[#1c160d]">
-          <svg
-            className="w-5 h-5"
-            viewBox="0 0 48 48"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
-            />
-          </svg>
-          <h2 className="text-lg font-bold">Mindful Oasis</h2>
-        </div>
-
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-[#1c160d]">
-          <a onClick={() => navigate('/')}>Home</a>
-          <a onClick={() => navigate('/events')}>Events</a>
-          <a onClick={() => navigate('/aboutus')}>About Us</a>
-          <a onClick={() => navigate('/contact')}>Contact</a>
-        </nav>
-
-        <button className="ml-4 rounded-lg h-10 px-4 bg-[#f4efe7] text-[#1c160d] font-bold text-sm">
-          Login
-        </button>
-      </header>
+      
+      <Header />
 
       {/* Form */}
       <main className="flex flex-1 items-center justify-center px-4 sm:px-10 py-6">
