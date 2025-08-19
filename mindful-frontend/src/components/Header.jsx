@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/icon-logo.png'
+import { Link } from 'react-router'
 
 function Header() {
   return (
@@ -13,10 +14,10 @@ function Header() {
                   </div>
                   <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
                     <div className="flex flex-wrap justify-center gap-4 md:gap-9">
-                      <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/">Home</a>
-                      <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/events">Events</a>
-                      <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/aboutus">About</a>
-                      <a className="text-[#1c160d] text-sm font-medium leading-normal" href="/contact">Contact</a>
+                      <Link className="text-[#1c160d] text-sm font-medium leading-normal" to="/">Home</Link>
+                      <Link className="text-[#1c160d] text-sm font-medium leading-normal" to="/events">Events</Link>
+                      <Link className="text-[#1c160d] text-sm font-medium leading-normal" to="/aboutus">About</Link>
+                      <Link className="text-[#1c160d] text-sm font-medium leading-normal" to="/contact">Contact</Link>
                     </div>
                     <div className="flex gap-2 mt-2 md:mt-0">
                       <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]">
