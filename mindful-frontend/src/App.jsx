@@ -5,6 +5,7 @@ import Events from './components/Events'
 import Contactus from './components/Contactus'
 import Aboutus from './components/Aboutus'
 import Login from './components/Login'
+import EventDetailsPage from './components/EventDetailsPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/contact' element={<Contactus />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/eventdetails' element={<EventDetailsPage />} />
       </Routes>
     </BrowserRouter>
   )

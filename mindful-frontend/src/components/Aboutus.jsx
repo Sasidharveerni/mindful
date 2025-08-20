@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import logo from '../assets/icon-logo.png'
 import Header from './Header';
+import Footer from './Footer';
 
 const Aboutus = () => {
     const navigate = useNavigate();
@@ -117,19 +118,7 @@ const Aboutus = () => {
       </div>
       
       {/* Footer */}
-      <footer className="flex justify-center">
-        <div className="flex max-w-[960px] flex-1 flex-col">
-          <div className="flex flex-col gap-6 px-5 py-10 text-center">
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-              <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/')}>Home</a>
-              <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/events')}>Events</a>
-              <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/aboutus')}>About Us</a>
-              <a className="text-[#9c7e49] text-base font-normal leading-normal min-w-40" onClick={() => navigate('/contact')}>Contact</a>
-            </div>
-            <p className="text-[#9c7e49] text-base font-normal leading-normal">@2024 Mindful Oasis. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+       <Footer />
     </div>
   );
 };

@@ -183,6 +183,7 @@ const Events = () => {
                         </div>
                         <button
                           className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f4efe7] text-[#1c160d] text-sm font-medium leading-normal w-fit"
+                         onClick={() => navigate('/eventdetails')}
                         >
                           <span className="truncate">View Details</span>
                         </button>
