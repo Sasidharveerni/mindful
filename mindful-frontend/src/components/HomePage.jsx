@@ -1,24 +1,126 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { HeartSymbol, PeopleSymbol, IdeaSymbol } from "../assets/svg";
 import { useNavigate } from "react-router";
+// import bgVideo from "../assets/background-video.mp4";
 
 export default function HomePage() {
   const navigate = useNavigate()
+
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    // Auto-scroll only on desktop
+    const isDesktop = window.innerWidth >= 768;
+    if (!isDesktop) return;
+
+    let scrollInterval;
+    let isPaused = false;
+
+    const startAutoScroll = () => {
+      scrollInterval = setInterval(() => {
+        if (!isPaused && scrollContainer) {
+          const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+          if (scrollLeft >= scrollWidth - clientWidth) {
+            // Reset to beginning
+            scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            scrollContainer.scrollBy({ left: 320, behavior: 'smooth' });
+          }
+        }
+      }, 3000);
+    };
+
+    const handleMouseEnter = () => { isPaused = true; };
+    const handleMouseLeave = () => { isPaused = false; };
+
+    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+
+    startAutoScroll();
+
+    return () => {
+      clearInterval(scrollInterval);
+      scrollContainer?.removeEventListener('mouseenter', handleMouseEnter);
+      scrollContainer?.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   return (
-    <div
-      className="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden"
-      style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
-    >
-      <div className="layout-container flex h-full grow flex-col">
-        {/* Responsive Header */}
-        <Header />
+  <div
+    className="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden"
+    style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
+  >
+    <div className="layout-container flex h-full grow flex-col">
+      {/* Responsive Header */}
+      <Header />
+
+      <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden rounded-none sm:rounded-lg">
+        {/* Background Video - Mobile Friendly */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark Overlay for readability */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-3xl">
+          <h1 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
+            Elevate Your Business in the ICON STAR Conferences
+          </h1>
+
+          <p className="text-white text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-4 sm:mb-6">
+            Join leading experts and visionary entrepreneurs at our premier business conferences.
+          </p>
+
+          <div className="flex flex-row xs:flex-row gap-3 sm:gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#f29e0d] text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto" onClick={() => navigate('/aboutus')}>
+              About us
+            </button>
+            <button className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white/80 text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto" onClick={() => navigate('/events')}>
+              Explore Events
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-4 md:px-40 flex flex-1 justify-center py-5">
+        <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div className="flex flex-wrap justify-between gap-3 p-4">
+            <h1 className="text-[#1c160d] tracking-light text-2xl md:text-[32px] font-bold leading-tight min-w-72">About ICON STAR CONFERENCES </h1>
+          </div>
+
+          {/* Introduction */}
+          <p className="text-[#1c160d] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            Welcome to ICON STAR CONFERENCES the premier destination for ambitious entrepreneurs, innovative startups, and visionary small business owners ready to scale new heights.
+            At ICON STAR CONFERENCE we are passionate about empowering the next generation of business leaders. Our mission is to provide a transformative platform where dynamic ideas and actionable strategies converge. As the essential business-to-business event of the year, we are dedicated to creating an environment that fosters growth, collaboration, and success.
+          </p>
+
+          <button className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#f29e0d] text-[#1c160d] font-bold text-sm sm:text-base ml-4 min-w-[120px] max-w-[200px]" onClick={() => navigate('/aboutus')}>
+            Read more
+          </button>
+        </div>
+      </div>
+
+
 
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
-            {/* Hero Section */}
-            <div className="p-2 sm:p-4">
+        
+            {/* <div className="p-2 sm:p-4">
               <div
                 className="flex min-h-[280px] sm:min-h-[320px] md:min-h-[400px] lg:min-h-[480px] flex-col gap-4 md:gap-8 bg-cover bg-center bg-no-repeat rounded-lg items-center justify-center p-4 sm:p-6 md:p-8"
                 style={{
@@ -38,17 +140,24 @@ export default function HomePage() {
                   <span className="truncate">Book Your Seat Now</span>
                 </button>
               </div>
-            </div>
+            </div> */}
 
-            {/* Upcoming Conferences */}
+     
+
+
+
+           {/* Upcoming Conferences */}
             <h2 className="text-[#1c160d] text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5 sm:pt-6 md:pt-8">
               Upcoming Conferences
             </h2>
 
             <div className="px-2 sm:px-4">
-              <div className="flex flex-col sm:flex-row sm:overflow-x-auto pb-4 gap-4 sm:gap-4 md:gap-6 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div 
+                ref={scrollRef}
+                className="flex flex-col sm:flex-row sm:overflow-x-auto pb-4 gap-4 sm:gap-4 md:gap-6 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex flex-col gap-3 sm:gap-4 rounded-lg w-full sm:min-w-[280px] md:min-w-[300px] sm:flex-shrink-0" onClick={() => navigate('/eventdetails')}>
+                  <div key={i} className="flex flex-col gap-3 sm:gap-4 rounded-lg w-full sm:min-w-[280px] md:min-w-[300px] sm:flex-shrink-0">
                     <div
                       className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
                       style={{
