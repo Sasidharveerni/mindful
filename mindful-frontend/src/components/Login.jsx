@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import logo from '../assets/icon-logo.png'
 import Header from "./Header";
 
@@ -8,12 +8,10 @@ export default function Login() {
     const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    fullName: "",
     email: "",
-    phone: "",
     password: "",
     confirmPassword: "",
-    agree: false,
+ 
   });
 
   const handleChange = (e) => {
@@ -44,22 +42,10 @@ export default function Login() {
           onSubmit={handleSubmit}
           className="w-full max-w-md bg-white/50 rounded-xl p-6 shadow-sm"
         >
-          <h2 className="text-[#1c160d] text-2xl font-bold text-center mb-6">
-            Create Your Account
+          <h2 className="text-[#1c160d] text-2xl font-bold text-center mb-6" onClick={() => navigate('/register')}>
+            Log in to your account
           </h2>
 
-          {/* Full Name */}
-          <label className="block mb-4">
-            <p className="text-[#1c160d] font-medium mb-2">Full Name</p>
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Enter your full name"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="w-full h-12 px-4 rounded-lg bg-[#f4efe7] text-[#1c160d] placeholder:text-[#9c7e49] focus:outline-none"
-            />
-          </label>
 
           {/* Email */}
           <label className="block mb-4">
@@ -74,18 +60,7 @@ export default function Login() {
             />
           </label>
 
-          {/* Phone */}
-          <label className="block mb-4">
-            <p className="text-[#1c160d] font-medium mb-2">Phone Number</p>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter your phone number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full h-12 px-4 rounded-lg bg-[#f4efe7] text-[#1c160d] placeholder:text-[#9c7e49] focus:outline-none"
-            />
-          </label>
+         
 
           {/* Password */}
           <label className="block mb-4">
@@ -100,49 +75,23 @@ export default function Login() {
             />
           </label>
 
-          {/* Confirm Password */}
-          <label className="block mb-4">
-            <p className="text-[#1c160d] font-medium mb-2">Confirm Password</p>
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm your password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full h-12 px-4 rounded-lg bg-[#f4efe7] text-[#1c160d] placeholder:text-[#9c7e49] focus:outline-none"
-            />
-          </label>
+        
 
-          {/* Checkbox */}
-          <label className="flex items-center gap-2 mb-4">
-            <input
-              type="checkbox"
-              name="agree"
-              checked={formData.agree}
-              onChange={handleChange}
-              className="h-5 w-5 rounded border-2 border-[#e8dfce] text-[#f29e0d] focus:ring-0"
-            />
-            <span className="text-sm text-[#1c160d]">
-              I agree to the{" "}
-              <a href="#" className="underline text-[#f29e0d]">
-                Terms and Conditions
-              </a>
-            </span>
-          </label>
+      
 
           {/* Submit */}
           <button
             type="submit"
             className="w-full h-12 bg-[#f29e0d] text-[#1c160d] font-bold rounded-lg"
           >
-            Sign Up
+           Login
           </button>
 
           <p className="text-[#9c7e49] text-sm text-center mt-4">
-            Already have an account?{" "}
-            <a href="#" className="underline">
-              Login
-            </a>
+            Don't have an account?{" "}
+            <Link to="/register" className="underline">
+              Register
+            </Link>
           </p>
         </form>
       </main>

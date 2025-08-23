@@ -15,19 +15,14 @@ Events : {
     imgLink,
     Venue,
     Date, 
-    Sessions,
-    buyticket: [onlyreg, planA, planB, virtual],
-    benifits
+    Sessions, [Array of strings]
 }
 
 User: {
     name,
     email,
     password,
-    RegisteredEvent: ref(Events(name)),
-    isSpeaker: 0
-    isAdmin: 0,
-    planType
+    profileimgLink
 }
 payments: {
     what could we add here also I want to know that , if I add stripe / paypal / razorpay gateways suggest me a best way to implement so that above 2 fields I can implment now this payment I will implement later once I got kyc verification. also how do owner know the amount is flowing etc., how customer knows the transacion / invoice

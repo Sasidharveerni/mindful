@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomePage from './components/HomePage'
 import {BrowserRouter, Routes, Route} from 'react-router'
 import Events from './components/Events'
@@ -6,17 +6,164 @@ import Contactus from './components/Contactus'
 import Aboutus from './components/Aboutus'
 import Login from './components/Login'
 import EventDetailsPage from './components/EventDetailsPage'
+import CreateEvent from './components/CreateEvent'
+import RegistrationPage from './components/RegistrationPage'
+
 
 function App() {
+  const [mockevents, setmockEvents] = useState([
+    {
+      id: 1,
+      title: "World Summit on Leadership",
+      theme: "Developing the Next Generation of Leaders",
+      imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      location: "Dubai, UAE",
+      Date: "February 19-20, 2026",
+      sessions: [
+        "The Neuroscience of Leadership: Decision-Making and Emotional Intelligence",
+        "Transformational vs. Transactional Leadership: Evolving Models in the 21st Century",
+        "Systems Thinking and Complexity in Leadership Research",
+        "Cross-Cultural Leadership: Global Challenges and Best Practices",
+        "Ethical and Responsible Leadership in Times of Crisis",
+        "Innovation Leadership: Driving Creativity in Organizations",
+        "Strategic Leadership for Organizational Sustainability",
+        "Leadership and Corporate Governance in a Digital Economy",
+        "Leading High-Performance Teams: Science of Collaboration and Motivation",
+        "Women in Leadership: Breaking Barriers and Building Futures",
+        "AI and Leadership: Human-Machine Collaboration in Decision Making",
+        "Leading Remote & Hybrid Teams: The Science of Virtual Leadership",
+        "Leadership in the Era of Industry 4.0 and Digital Transformation",
+        "Cybersecurity Leadership: Building Resilience in Organizations",
+        "Leadership Competencies for the Future of Work",
+        "Political and Civic Leadership in an Age of Polarization",
+        "Leadership for Global Peace and Conflict Resolution",
+        "Sustainability Leadership: Climate Change, Energy, and Social Responsibility",
+        "Leadership in Education: Transforming Learning Systems",
+        "Health Leadership: Lessons from Global Pandemics and Public Health Crises",
+        "Mindfulness and Resilient Leadership Practices",
+        "Coaching Science: Building Next-Generation Leaders",
+        "Emotional Intelligence and Adaptive Leadership in Complex Environments",
+        "Leadership Communication: Science of Influence and Persuasion",
+        "Measuring Leadership Impact: Metrics, Analytics, and Big Data Approaches"
+      ]
+    },
+    {
+      id: 2,
+      title: "World Summit on Psychiatry, Mental Health",
+      theme: "Women Leading the Way in Mental Health, Psychiatry, Nursing & Healthcare",
+      imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      location: "Dubai, UAE",
+      Date: "February 19-20, 2026",
+      sessions: [
+        "Adult and Pediatric Spinal Deformities",
+        "Adolescent Idiopathic Scoliosis",
+        "Aging Spine and Spinal Fracture",
+        "Case Reports and Debate on Spinal Disorders",
+        "Degenerative Disc Disease",
+        "Diagnosis of Spinal Disorders",
+        "Imaging Modalities in Spinal Radiology",
+        "Metastatic and Primary Spinal Tumors",
+        "Minimally Invasive Spine Surgery",
+        "Navigation-Assisted Spine Surgery",
+        "Neuro Spinal Complications",
+        "Neuromuscular/Syndromic Deformity",
+        "Non-Operative Treatment Methods",
+        "Radiomics and Artificial Intelligence (AI)",
+        "Robotic Technology in Spine Surgery",
+        "Spasticity, Spinal Pain, and Spinal Infection",
+        "Spinal Arthroplasty and Motion Preservation",
+        "Spinal Biologics",
+        "Spinal Cord Injury",
+        "Spinal Imaging",
+        "Spinal Interventional Radiology",
+        "Spinal Pathology",
+        "Spinal Rehabilitation and Nursing Care",
+        "Spine Surgery",
+        "Surgical Approaches to the Spine"
+      ]
+    },
+    {
+      id: 3,
+      title: "2nd World Summit on Feminism",
+      theme: "Achieve gender equality and empower all women and girls",
+      imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      location: "London, UK",
+      Date: "October 08-09, 2026",
+      sessions: [
+        "Gender, Identity, and Representation",
+        "Health, Well-Being, and Body Politics",
+        "LGBTQ+ Rights and Legal Frameworks",
+        "Digital Activism, Social Media, and Technology",
+        "Economic Justice and Labor Rights",
+        "Education, Literature, and Historical Perspectives",
+        "Masculinity and Feminism",
+        "Aging, Feminism, and LGBTQ+ Identity",
+        "Sports, Activism, and Representation",
+        "Feminism, LGBTQ+ Movements, and Populism",
+        "Religion, Spirituality, and LGBTQ+ Identities",
+        "Disability Justice and Feminism",
+        "Sex, Pleasure, and Queer Feminist Eroticism",
+        "Global Perspectives on Reproductive Justice",
+        "Climate Justice and Feminism/LGBTQ+ Activism",
+        "Feminist and Queer Approaches to Conflict & Peacebuilding",
+        "Political Leadership and Representation",
+        "Digital Spaces and Online Feminist & LGBTQ+ Activism",
+        "Queer and Feminist Perspectives on Migration & Borders",
+        "Art, Fashion, and Cultural Expression",
+        "Sexuality, Consent, and Relationships",
+        "Feminism, LGBTQ+ Rights, and Global Politics",
+        "Digital Activism, Social Media, and Technology",
+        "Intersectionality and Marginalized Voices",
+        "Gender, Identity, and Representation"
+      ]
+    },
+    {
+      id: 4,
+      title: "2nd World Summit on Spine and Spinal Disorders",
+      theme: "Modern Approaches to Spinal Recovery: Innovation, Cure, and Treatment.",
+      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      location: "London, UK",
+      Date: "October 08-09, 2026",
+      sessions: [
+        "Advances in Neuropsychiatry and Brain Science",
+        "Global Burden of Mental Disorders and Public Health Policies",
+        "Child and Adolescent Psychiatry: Early Intervention and Care",
+        "Geriatric Psychiatry: Mental Health in Aging Populations",
+        "Depression, Anxiety, and Stress Disorders: New Perspectives",
+        "Schizophrenia and Psychotic Disorders: Diagnosis and Management",
+        "Substance Use Disorders and Addiction Psychiatry",
+        "Suicide Prevention Strategies and Crisis Intervention",
+        "Trauma, PTSD, and Resilience Building",
+        "Personality Disorders: Clinical and Therapeutic Approaches",
+        "Women's Mental Health: Hormonal, Social, and Cultural Perspectives",
+        "Neurodevelopmental Disorders: Autism and ADHD",
+        "Digital Psychiatry: Telemedicine, AI, and Mobile Health Tools",
+        "Mindfulness, Meditation, and Integrative Mental Health",
+        "Cross-Cultural Psychiatry and Global Perspectives",
+        "Stigma Reduction and Mental Health Advocacy",
+        "Forensic Psychiatry: Law, Ethics, and Mental Illness",
+        "Psychopharmacology: Innovations and Challenges",
+        "Psychotherapy: Evidence-Based Practices and Emerging Trends",
+        "Occupational Mental Health and Workplace Wellbeing",
+        "Sleep Disorders and Mental Health Connection",
+        "Eating Disorders and Body Image Issues",
+        "Community Mental Health and Primary Care Integration",
+        "Climate Change, Disasters, and Mental Health Impacts",
+        "Future Directions in Psychiatry: Precision Medicine and Genomics"
+      ]
+    }
+  ])
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/events' element={<Events />} />
+        <Route path='/events' element={<Events mockEvents={mockevents} />} />
         <Route path='/contact' element={<Contactus />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/eventdetails' element={<EventDetailsPage />} />
+        <Route path='/register' element={<RegistrationPage />} />
+        <Route path='/eventdetails/:id' element={<EventDetailsPage mockEvents={mockevents} />} />
+        <Route path='/createevent' element={<CreateEvent />} />
       </Routes>
     </BrowserRouter>
   )

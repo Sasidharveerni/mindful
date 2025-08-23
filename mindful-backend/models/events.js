@@ -21,12 +21,9 @@ const eventSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    eventLocation: {
-        type: String,
-        required: true
-    },
+   
     sessions: {
-        type: Array, // [{Track1: value, Track2: value, ...}]
+        type: Array, // ["session-1", "session-2"]
         required: true
     },
     registeredUsers: {

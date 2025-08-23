@@ -4,42 +4,11 @@ import { DownArrow, LeftArrow, SearchIcon } from '../assets/svg';
 import logo from '../assets/icon-logo.png'
 import Header from './Header';
 
-const Events = () => {
+const Events = ({mockEvents}) => {
   const navigate = useNavigate();
   // Mock data - replace with your actual data fetching logic
-  const mockEvents = [
-    {
-      id: 1,
-      title: "Mindful Living Expo",
-      description: "Explore the latest in mental wellness and self-care. Featuring workshops, talks, and exhibitors.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b"
-    },
-    {
-      id: 2,
-      title: "Therapy & Counseling Summit",
-      description: "A professional gathering for therapists and counselors, focusing on innovative techniques and research.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD7BX1gyPt2Qu67HOfZvjZ_ra-zc-qaaDuH6tAnlNtzizy97Ruf3p61pTeozb9bOd5f79cO5rtIGkBZp1v6aCfy86G2c2RDXqKDGv_lWAMQJeLzndiO6iss0VkfSJ1MEt4hiC6PyGZe35wA3Y50dsQAP2qApRb17Na9T8A_u7xd8Y0GIJZM4vuipN-A7hU8yArGJK9yb0krIHdJemIqbVRFT1rfdVTQtEM_bsSFisQaCJ08uuESjMok6rDvIfTH2ABWu2OQkyaCucMx"
-    },
-    {
-      id: 3,
-      title: "Youth Mental Health Forum",
-      description: "Addressing the unique mental health challenges faced by young people in today's world.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuADPFiz7-O1lmwEMuGO6EbL9CBMWmdh7CUxcTcfBn7jUZ_96kWMp2kJJzErvQJtkk3GL9Qm68vohSAPG6gMoIK23jp4N2mXbY10v-G3C6ytMhqhV8bEShjfJ6fyujB_RJdjFY9tZuyAj5EPnPcj_apmREexxNst_nZFpMjFCueDZgPNsHC9wZGb-8ylP0gyGDb0yo_nCvJORSDFNvIfDFIW_GcScJ0hg_pBdkS_1btF9BDBaCBUm8XFdGg7pFZd0ucZdSzXQs6BsZ87"
-    },
-    {
-      id: 4,
-      title: "Corporate Wellness Symposium",
-      description: "Strategies for fostering mental well-being in the workplace, enhancing productivity and employee satisfaction.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCqi14jsowwD54k7MtI1RREQhZ9CNV7RCDUw7Ll8M9QPlUpza11j-leSMraUhb9qSfi_ssz4eC9f95xHgdRnwuogDIvsGfnVeK3cFSPVsXEisjatoJ_kYMXtnzmFfKPcUCpfbe-dai8_bkN6isU52fUcAP7WKu1fzGQzkfCYR4aUG5BXowesDfTAV-REfph35p0nysd4dxWotcppW3F3jfaD4XNBftOFMmj08wx1XZ9X9mKNVQSsXcg_u-fEGkFwfZCVtuioY5eaPgv"
-    },
-    // Add more mock data as needed
-    { id: 5, title: "Event 5", description: "Description 5", imageUrl: "" },
-    { id: 6, title: "Event 6", description: "Description 6", imageUrl: "" },
-    { id: 7, title: "Event 7", description: "Description 7", imageUrl: "" },
-    { id: 8, title: "Event 8", description: "Description 8", imageUrl: "" },
-    { id: 9, title: "Event 9", description: "Description 9", imageUrl: "" },
-    { id: 10, title: "Event 10", description: "Description 10", imageUrl: "" },
-  ];
+
+ 
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -178,12 +147,15 @@ const Events = () => {
                         <div className="flex flex-col gap-1">
                           <p className="text-[#1c160d] text-base font-bold leading-tight">{event.title}</p>
                           <p className="text-[#9c7e49] text-sm font-normal leading-normal">
-                            {event.description}
+                            {event.theme}
                           </p>
                         </div>
                         <button
                           className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f4efe7] text-[#1c160d] text-sm font-medium leading-normal w-fit"
-                         onClick={() => navigate('/eventdetails')}
+                         onClick={() => {
+                          console.log(event.id)
+                          navigate(`/eventdetails/${event.id}`)}
+                         }
                         >
                           <span className="truncate">View Details</span>
                         </button>
@@ -230,8 +202,8 @@ const Events = () => {
                     disabled={currentPage === totalPages}
                     className="flex size-10 items-center justify-center disabled:opacity-50"
                   >
-                    <div className="text-[#1c160d]">
-                     
+                    <div className="text-[#1c160d] rotate-180">
+                      <LeftArrow />
                     </div>
                   </button>
                 </div>
