@@ -79,11 +79,11 @@ export default function HomePage() {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-3xl">
           <h1 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
-            Elevate Your Business in the ICON STAR Conferences
+            Elevate your brand and personal visibility on global stage  in the ICON STAR Conferences
           </h1>
 
           <p className="text-white text-sm sm:text-base md:text-lg max-w-xl mx-auto mb-4 sm:mb-6">
-            Join leading experts and visionary entrepreneurs at our premier business conferences.
+            Join our interactive forums to enhance your personal and professional brand.
           </p>
 
           <div className="flex flex-row xs:flex-row gap-3 sm:gap-4 justify-center">
@@ -114,7 +114,39 @@ export default function HomePage() {
           </button>
         </div>
       </div>
+       
 
+       {/* added a customer card here with 2 fields, email, and mobile */}
+
+       <div className="lg:px-12 xl:px-40 px-4 md:px-40 bg-white rounded-lg border border-[#e8dfce] p-6 shadow-sm">
+  <h3 className="text-[#1c160d] text-lg font-semibold mb-4">Customer Details</h3>
+  
+  <div className="space-y-3">
+    <div className="flex items-center">
+      <div className="text-[#9c7e49] mr-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V64H216V192ZM173.66,85.66,128,131.31,82.34,85.66A8,8,0,0,0,70.34,97.66l48,48a8,8,0,0,0,11.32,0l48-48a8,8,0,0,0-11.32-11.32Z"/>
+        </svg>
+      </div>
+      <div>
+        <p className="text-[#9c7e49] text-sm font-medium">Email</p>
+        <p className="text-[#1c160d]">customer.support@iconstarconferences.com</p>
+      </div>
+    </div>
+    
+    <div className="flex items-center">
+      <div className="text-[#9c7e49] mr-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z"/>
+        </svg>
+      </div>
+      <div>
+        <p className="text-[#9c7e49] text-sm font-medium">Mobile</p>
+        <p className="text-[#1c160d]">+44 7901091329</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-40 flex flex-1 justify-center py-5">
@@ -186,20 +218,20 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Why Business Growth Matters */}
+{/*             
             <h2 className="text-[#1c160d] text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5 sm:pt-6 md:pt-8">
               Why Business Growth Matters
-            </h2>
+            </h2> */}
 
             <div className="flex flex-col gap-6 sm:gap-8 px-2 sm:px-4 py-4 sm:py-6 md:py-10">
-              <div className="flex flex-col gap-3 sm:gap-4">
+              {/* <div className="flex flex-col gap-3 sm:gap-4">
                 <h1 className="text-[#1c160d] tracking-light text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold md:font-black leading-tight max-w-[720px]">
                   Prioritize Your Business Growth
                 </h1>
                 <p className="text-[#1c160d] text-sm sm:text-base font-normal leading-normal max-w-[720px]">
                   Investing in professional development and business growth is essential for entrepreneurial success. Our conferences provide the tools and knowledge to thrive.
                 </p>
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div className="flex flex-1 gap-3 rounded-lg border border-[#e8dfce] bg-[#fcfaf8] p-4 sm:p-5 flex-col">
@@ -235,9 +267,9 @@ export default function HomePage() {
             </div>
 
             {/* Why ICON STAR Conferences */}
-            <h2 className="text-[#1c160d] text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5 sm:pt-6 md:pt-8">
+            {/* <h2 className="text-[#1c160d] text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-3 pt-5 sm:pt-6 md:pt-8">
               Why Choose ICON STAR Conferences
-            </h2>
+            </h2> */}
 
             <div className="flex flex-col gap-6 sm:gap-8 px-2 sm:px-4 py-4 sm:py-6 md:py-10">
               <div className="flex flex-col gap-3 sm:gap-4">

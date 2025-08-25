@@ -109,23 +109,33 @@ export default function EventDetailsPage({ mockEvents }) {
                 {[
                   {
         title: "Speaker Registration",
-        price: "$699",
+        price: "$599",
         features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot"],
       },
       {
         title: "Package-A",
-        price: "$999",
+        price: "$899",
         features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot + 2 Nights Accommodation"],
       },
       {
         title: "Package-B",
-        price: "$1,199",
+        price: "$1,099",
         features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot + 3 Nights Accommodation"],
       },
       {
         title: "Exhibitor Pass",
-        price: "$1,499",
+        price: "$1,399",
         features: ["Certificate", "CPD Credits", "Exhibitor Booth", "Speaker Slot"],
+      },
+      {
+        title: "Delegate Pass",
+        price: "$299",
+        features: ["Certificate", "CPD Credits", "Breakfast & Lunch"],
+      },
+      {
+        title: "Virtual Pass",
+        price: "$299",
+        features: ["Certificate", "CPD Credits",],
       },
                 ].map((plan, index) => (
                   <div
