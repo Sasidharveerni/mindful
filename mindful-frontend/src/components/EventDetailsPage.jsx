@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import EventBanner from "./EventBanner";
 
 export default function EventDetailsPage({ mockEvents }) {
   const navigate = useNavigate()
@@ -32,6 +33,9 @@ export default function EventDetailsPage({ mockEvents }) {
     >
       <div className="layout-container flex h-full grow flex-col">
         <Header />
+
+        {/* Insert banner here */}
+        <EventBanner event={event}/>
         
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-40 flex flex-1 justify-center py-5">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
@@ -46,7 +50,26 @@ export default function EventDetailsPage({ mockEvents }) {
                   {event.theme}
                 </p>
               </div>
-              
+
+              {/* About Event */}
+
+             
+          
+          {/* Title Section */}
+          <div className="flex flex-col gap-4 p-4">
+            <h1 className="text-[#1c160d] tracking-light text-2xl md:text-[32px] font-bold leading-tight min-w-72">About the {event.title}  </h1>
+          </div>
+          
+          {/* Introduction */}
+          <p className="text-[#977e4e] text-sm sm:text-base font-normal leading-normal">
+           {event.desc1}
+          </p>
+          
+          {/* Mission Section */}
+          <p className="text-[#977e4e] text-sm sm:text-base font-normal leading-normal">
+           {event.desc2}
+          </p>
+      
               {/* Event Image */}
               <div className="w-full mt-4">
                 <img
@@ -80,25 +103,64 @@ export default function EventDetailsPage({ mockEvents }) {
             <h3 className="text-[#1b160e] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">
               Registration
             </h3>
-            
-            <div className="px-4 py-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div className="bg-[#f4efe7] px-4 sm:px-6 py-8 rounded-lg">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {[
-                  { title: "Only Registration", price: "$599" },
-                  { title: "Plan A", price: "$899" },
-                  { title: "Plan B", price: "$1099" },
-                  { title: "Virtual", price: "$299" }
+                  {
+        title: "Speaker Registration",
+        price: "$699",
+        features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot"],
+      },
+      {
+        title: "Package-A",
+        price: "$999",
+        features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot + 2 Nights Accommodation"],
+      },
+      {
+        title: "Package-B",
+        price: "$1,199",
+        features: ["Certificate", "CPD Credits", "Breakfast & Lunch", "Speaker Slot + 3 Nights Accommodation"],
+      },
+      {
+        title: "Exhibitor Pass",
+        price: "$1,499",
+        features: ["Certificate", "CPD Credits", "Exhibitor Booth", "Speaker Slot"],
+      },
                 ].map((plan, index) => (
-                  <div key={index} className="flex flex-col gap-4 rounded-lg border border-solid border-[#e7dfd0] bg-[#fcfaf8] p-4 sm:p-6">
-                    <div className="flex flex-col gap-1">
-                      <h1 className="text-[#1b160e] text-sm sm:text-base font-bold leading-tight">{plan.title}</h1>
-                      <span className="text-[#1b160e] text-2xl sm:text-3xl lg:text-4xl font-black leading-tight tracking-[-0.033em]">
-                        {plan.price}
-                      </span>
+                  <div
+                    key={index}
+                    className="relative flex flex-col justify-between bg-white rounded-xl p-6 shadow-lg border border-[#e8dfce]"
+                  >
+                    {/* Title pill */}
+                    <span className="absolute -top-3 left-6 bg-[#f29e0d] text-[#1c160d] px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+                      {plan.title}
+                    </span>
+
+                    {/* Features */}
+                    <div className="mt-6 space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <div key={i} className="flex items-center">
+                          <div className="text-[#f29e0d] mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                              <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/>
+                            </svg>
+                          </div>
+                          <p className="text-[#1c160d] text-sm">{feature}</p>
+                        </div>
+                      ))}
                     </div>
-                    <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f3efe7] text-[#1b160e] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#e69e19] transition-colors">
-                      <span className="truncate">Buy Ticket</span>
-                    </button>
+
+                    {/* Price & Button */}
+                    <div className="flex flex-col items-start mt-6">
+                      <p className="text-2xl font-bold text-[#1c160d]">{plan.price}</p>
+                      <button className="mt-4 bg-[#f29e0d] hover:bg-[#e68c00] text-[#1c160d] px-5 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 transition-colors">
+                        Register Now 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                          <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -130,12 +192,15 @@ export default function EventDetailsPage({ mockEvents }) {
             </div>
 
             {/* Call to Action Section */}
-            <div className="bg-[#f3efe7] rounded-lg mx-4 my-8 p-6 text-center">
-              <h3 className="text-[#1b160e] text-lg sm:text-xl font-bold mb-3">Ready to Join Us?</h3>
-              <p className="text-[#977e4e] text-sm sm:text-base mb-4">
+            <div className="bg-[#f4efe7] rounded-lg mx-4 my-8 p-6 text-center">
+              <h3 className="text-[#1c160d] text-lg sm:text-xl font-bold mb-3">Ready to Join Us?</h3>
+              <p className="text-[#9c7e49] text-sm sm:text-base mb-4">
                 Don't miss this opportunity to connect with leading experts and advance your knowledge.
               </p>
-              <button className="bg-[#e69e19] text-[#1b160e] px-6 py-3 rounded-lg font-bold text-sm sm:text-base hover:bg-[#d68c0a] transition-colors" onClick={() => navigate("/register")}>
+              <button 
+                className="bg-[#f29e0d] hover:bg-[#e68c00] text-[#1c160d] px-6 py-3 rounded-lg font-bold text-sm sm:text-base transition-colors" 
+                onClick={() => navigate("/register")}
+              >
                 Register Now
               </button>
             </div>

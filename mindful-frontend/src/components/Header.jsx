@@ -8,7 +8,7 @@ function Header() {
     <div>
         <header className="flex flex-col md:flex-row items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4efe7] px-4 md:px-10 py-3">
                   <div className="flex items-center gap-4 text-[#1c160d] mb-4 md:mb-0">
-                    <div className="size-4">
+                    <div className="size-10">
                        <img src={logo} alt='ICONSTAR logo' />
                     </div>
                     <h2 className="text-[#1c160d] text-lg font-bold leading-tight tracking-[-0.015em]">ICON STAR CONFERENCES</h2>

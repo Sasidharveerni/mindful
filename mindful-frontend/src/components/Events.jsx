@@ -12,7 +12,7 @@ const Events = ({mockEvents}) => {
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const [eventsPerPage] = useState(4); // Number of events per page
+  const [eventsPerPage] = useState(3); // Number of events per page
   const [isLoading, setIsLoading] = useState(false);
   const [events, setEvents] = useState([]);
 
@@ -160,10 +160,10 @@ const Events = ({mockEvents}) => {
                           <span className="truncate">View Details</span>
                         </button>
                       </div>
-                      {event.imageUrl && (
+                      {event.bannerUrl && (
                         <div
                           className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
-                          style={{ backgroundImage: `url("${event.imageUrl}")` }}
+                          style={{ backgroundImage: `url("${event.bannerUrl}")` }}
                         ></div>
                       )}
                     </div>
