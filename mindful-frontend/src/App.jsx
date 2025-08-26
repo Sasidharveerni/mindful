@@ -551,7 +551,7 @@ function App() {
       title: "3rd world summit on Neurology and Psychology",
       theme: "Neuroscience & Mental Health: Translating Discoveries into Global Wellness",
       imageUrl: "/neuro.png",
-      bannerUrl: "/sinagapore-logo.png",
+      bannerUrl: "/neuro.png",
       location: "Singapore",
       Date: "March 08-09, 2026",
       Dates: "2026-03-08",
