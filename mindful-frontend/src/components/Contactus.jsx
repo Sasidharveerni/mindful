@@ -4,8 +4,12 @@ import { DubaiMap, WhatsApp } from '../assets/svg';
 import logo from '../assets/icon-logo.png'
 import Header from './Header';
 import Footer from './Footer';
+import toast, { Toaster } from "react-hot-toast";
 
 const Contactus = () => {
+  const submitForm = () => {
+    e.preventDefualt();
+  }
     const navigate = useNavigate();
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden" style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}>
@@ -34,7 +38,7 @@ const Contactus = () => {
             </div>
 
             {/* Contact Form */}
-            <form className="w-full">
+            <form className="w-full" onSubmit={submitForm}>
               {/* Name Field */}
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3 w-full">
                 <label className="flex flex-col min-w-40 flex-1 w-full">
@@ -70,13 +74,16 @@ const Contactus = () => {
 
               {/* Submit Button */}
               <div className="flex px-4 py-3 justify-start">
-                <button
-                  type="submit"
-                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span className="truncate">Send Message</span>
-                </button>
-              </div>
+      <button
+        type="button"
+        onClick={() => toast.success("✅ Your message has been sent")}
+        className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f29e0d] text-[#1c160d] text-sm font-bold leading-normal tracking-[0.015em]"
+      >
+        <span className="truncate">Send Message</span>
+      </button>
+
+      <Toaster position="bottom-center" />
+    </div>
             </form>
 
             {/* WhatsApp Option */}
@@ -84,6 +91,7 @@ const Contactus = () => {
             <div className="flex px-4 py-3 justify-start">
               <button
                 className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f4efe7] text-[#1c160d] gap-2 pl-4 text-sm font-bold leading-normal tracking-[0.015em]"
+                 onClick={() => window.open("https://wa.me/447901091329?text=Hi%20I%20am%20interested", "_blank")}
               >
                 <div className="text-[#1c160d]">
                   <WhatsApp />
