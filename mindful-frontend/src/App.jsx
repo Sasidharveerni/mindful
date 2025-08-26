@@ -52,23 +52,75 @@ function App() {
       ],
       agenda: {
   day1: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
-    talkTitle: [
-      "Inaugural Session",
-      "Future of Innovation",
-      "Mindfulness in Leadership",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
   day2: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
-    talkTitle: [
-      "Global Perspectives in Science",
-      "Spirituality in Modern Times",
-      "Resilience for Leaders",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
 }
     },
     {
@@ -108,8 +160,80 @@ function App() {
         "Spinal Rehabilitation and Nursing Care",
         "Spine Surgery",
         "Surgical Approaches to the Spine"
-      ]
+      ],
+        agenda: {
+  day1: {
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
+  day2: {
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
     },
+  },
     {
       id: 3,
       title: "2nd World Summit on Feminism",
@@ -148,33 +272,86 @@ function App() {
         "Intersectionality and Marginalized Voices",
         "Gender, Identity, and Representation"
       ],
-      agenda: {
+        agenda: {
   day1: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
-    talkTitle: [
-      "Inaugural Session",
-      "Future of Innovation",
-      "Mindfulness in Leadership",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
   day2: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
-    talkTitle: [
-      "Global Perspectives in Science",
-      "Spirituality in Modern Times",
-      "Resilience for Leaders",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
 }
+      
     },
+  },
     {
       id: 4,
       title: "2nd World Summit on Spine and Spinal Disorders",
       theme: "Modern Approaches to Spinal Recovery: Innovation, Cure, and Treatment.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
-      bannerUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      imageUrl: "/spinal.png",
+      bannerUrl: "/spinal.png",
       location: "London, UK",
       Date: "October 08-09, 2026",
       Dates: "2026-08-08",
@@ -209,32 +386,85 @@ function App() {
       ],
       agenda: {
   day1: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
-    talkTitle: [
-      "Inaugural Session",
-      "Future of Innovation",
-      "Mindfulness in Leadership",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
   day2: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
-    talkTitle: [
-      "Global Perspectives in Science",
-      "Spirituality in Modern Times",
-      "Resilience for Leaders",
-    ],
-  },
-}
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
+
       
     },
+  },
     {
       id: 5,
       title: "3rd world summit on unstoppable womens LED",
       theme: "Empowering women to inspire and mentor the next Gen of LED",
       imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
-      bannerUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      bannerUrl: "/sinagapore-logo.png",
       location: "Singapore",
       Date: "March 08-09, 2026",
       Dates: "2026-03-08",
@@ -243,33 +473,85 @@ function App() {
       sessions: [
         
       ],
-      agenda: {
+    agenda: {
   day1: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
-    talkTitle: [
-      "Inaugural Session",
-      "Future of Innovation",
-      "Mindfulness in Leadership",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
   day2: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
-    talkTitle: [
-      "Global Perspectives in Science",
-      "Spirituality in Modern Times",
-      "Resilience for Leaders",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
 }
+    }
     },
     {
       id: 6,
       title: "3rd world summit on Neurology and Psychology",
       theme: "Neuroscience & Mental Health: Translating Discoveries into Global Wellness",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
-      bannerUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      imageUrl: "/neuro.png",
+      bannerUrl: "/sinagapore-logo.png",
       location: "Singapore",
       Date: "March 08-09, 2026",
       Dates: "2026-03-08",
@@ -278,26 +560,77 @@ function App() {
       sessions: [
         
       ],
-      agenda: {
+   agenda: {
   day1: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
-    talkTitle: [
-      "Inaugural Session",
-      "Future of Innovation",
-      "Mindfulness in Leadership",
-    ],
-  },
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},
   day2: {
-    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
-    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
-    talkTitle: [
-      "Global Perspectives in Science",
-      "Spirituality in Modern Times",
-      "Resilience for Leaders",
-    ],
-  },
-}
+  time: [
+    "08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30", 
+    "09:30 – 10:00", "10:00 – 10:30", "10:30 – 11:00",
+    "11:00 – 11:30", "11:30 – 12:00", "12:00 – 12:30",
+    "12:30 – 13:00", "13:00 – 13:30", "13:30 – 14:00",
+    "14:00 – 14:30", "14:30 – 15:00", "15:00 – 15:30",
+    "15:30 – 16:00", "16:00 – 16:30"
+  ],
+  speaker: [
+    "Opening Ceremony", 
+    "Keynote Speaker", 
+    "Dr. Ananya Rao",
+    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+  ],
+  talkTitle: [
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available",
+    "Keynote Speaker Slot available"
+  ]
+},}
     }
   ])
   return (
