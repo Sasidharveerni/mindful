@@ -87,12 +87,27 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-row xs:flex-row gap-3 sm:gap-4 justify-center">
-            <button className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#f29e0d] text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto" onClick={() => navigate('/aboutus')}>
-              About us
-            </button>
-            <button className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white/80 text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto" onClick={() => navigate('/events')}>
-              Explore Events
-            </button>
+            <button 
+  className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-[#f29e0d] text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto relative overflow-hidden group transition-all duration-500"
+  onClick={() => navigate('/aboutus')}
+>
+  <span className="relative z-10">About us</span>
+  <div className="absolute inset-0 bg-[#1c160d] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+  <span className="absolute inset-0 flex items-center justify-center text-[#f29e0d] group-hover:opacity-100 opacity-0 transition-opacity duration-300 z-10">
+    About us
+  </span>
+</button>
+
+<button 
+  className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-white/80 text-[#1c160d] font-bold text-sm sm:text-base w-full xs:w-auto relative overflow-hidden group transition-all duration-500"
+  onClick={() => navigate('/events')}
+>
+  <span className="relative z-10">Explore Events</span>
+  <div className="absolute inset-0 bg-[#1c160d] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
+  <span className="absolute inset-0 flex items-center justify-center text-[#f29e0d] group-hover:opacity-100 opacity-0 transition-opacity duration-300 z-10">
+    Explore Events
+  </span>
+</button>
           </div>
         </div>
       </div>
@@ -282,34 +297,39 @@ export default function HomePage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7]">
-                  <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Our Mission</h3>
-                  <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
-                    We are passionate about empowering the next generation of business leaders by providing a transformative platform where dynamic ideas and actionable strategies converge.
-                  </p>
-                </div>
+  {/* Mission */}
+  <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7] border border-transparent hover:border-[#f29e0d] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Our Mission</h3>
+    <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
+      We are passionate about empowering the next generation of business leaders by providing a transformative platform where dynamic ideas and actionable strategies converge.
+    </p>
+  </div>
 
-                <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7]">
-                  <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Our Vision</h3>
-                  <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
-                    To create a vibrant ecosystem where innovative ideas flourish and entrepreneurial dreams become reality, inspiring a new generation of business leaders.
-                  </p>
-                </div>
+  {/* Vision */}
+  <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7] border border-transparent hover:border-[#f29e0d] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Our Vision</h3>
+    <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
+      To create a vibrant ecosystem where innovative ideas flourish and entrepreneurial dreams become reality, inspiring a new generation of business leaders.
+    </p>
+  </div>
 
-                <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7]">
-                  <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">What We Offer</h3>
-                  <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
-                    Essential B2B events that foster growth, collaboration, and success by connecting visionaries with resources, knowledge, and networks essential for success.
-                  </p>
-                </div>
+  {/* What We Offer */}
+  <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7] border border-transparent hover:border-[#f29e0d] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">What We Offer</h3>
+    <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
+      Essential B2B events that foster growth, collaboration, and success by connecting visionaries with resources, knowledge, and networks essential for success.
+    </p>
+  </div>
 
-                <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7] sm:col-span-2 lg:col-span-3">
-                  <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Who We Serve</h3>
-                  <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
-                    Ambitious entrepreneurs, innovative startups, and visionary small business owners who are ready to scale new heights and shape the future of business.
-                  </p>
-                </div>
-              </div>
+  {/* Who We Serve */}
+  <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 rounded-lg bg-[#f4efe7] border border-transparent hover:border-[#f29e0d] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 sm:col-span-2 lg:col-span-3">
+    <h3 className="text-[#1c160d] text-base sm:text-lg font-bold leading-tight">Who We Serve</h3>
+    <p className="text-[#9c7e49] text-xs sm:text-sm font-normal leading-normal">
+      Ambitious entrepreneurs, innovative startups, and visionary small business owners who are ready to scale new heights and shape the future of business.
+    </p>
+  </div>
+</div>
+
 
               <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-6">
                 <p className="text-[#1c160d] text-sm sm:text-base font-normal leading-normal">

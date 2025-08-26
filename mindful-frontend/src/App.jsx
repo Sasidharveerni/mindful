@@ -49,7 +49,27 @@ function App() {
         "Emotional Intelligence and Adaptive Leadership in Complex Environments",
         "Leadership Communication: Science of Influence and Persuasion",
         "Measuring Leadership Impact: Metrics, Analytics, and Big Data Approaches"
-      ]
+      ],
+      agenda: {
+  day1: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
+    talkTitle: [
+      "Inaugural Session",
+      "Future of Innovation",
+      "Mindfulness in Leadership",
+    ],
+  },
+  day2: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
+    talkTitle: [
+      "Global Perspectives in Science",
+      "Spirituality in Modern Times",
+      "Resilience for Leaders",
+    ],
+  },
+}
     },
     {
       id: 2,
@@ -127,7 +147,27 @@ function App() {
         "Digital Activism, Social Media, and Technology",
         "Intersectionality and Marginalized Voices",
         "Gender, Identity, and Representation"
-      ]
+      ],
+      agenda: {
+  day1: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
+    talkTitle: [
+      "Inaugural Session",
+      "Future of Innovation",
+      "Mindfulness in Leadership",
+    ],
+  },
+  day2: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
+    talkTitle: [
+      "Global Perspectives in Science",
+      "Spirituality in Modern Times",
+      "Resilience for Leaders",
+    ],
+  },
+}
     },
     {
       id: 4,
@@ -166,7 +206,98 @@ function App() {
         "Community Mental Health and Primary Care Integration",
         "Climate Change, Disasters, and Mental Health Impacts",
         "Future Directions in Psychiatry: Precision Medicine and Genomics"
-      ]
+      ],
+      agenda: {
+  day1: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
+    talkTitle: [
+      "Inaugural Session",
+      "Future of Innovation",
+      "Mindfulness in Leadership",
+    ],
+  },
+  day2: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
+    talkTitle: [
+      "Global Perspectives in Science",
+      "Spirituality in Modern Times",
+      "Resilience for Leaders",
+    ],
+  },
+}
+      
+    },
+    {
+      id: 5,
+      title: "3rd world summit on unstoppable womens LED",
+      theme: "Empowering women to inspire and mentor the next Gen of LED",
+      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      bannerUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      location: "Singapore",
+      Date: "March 08-09, 2026",
+      Dates: "2026-03-08",
+      desc1: "3rd world summit on unstoppable womens LED  , hosted by ICON STAR conferences, offers an unparalleled opportunity for women of diverse backgrounds and cultures to connect, collaborate and network on a variety of issues affecting their lives. The theme of the conference:-  'empowering women to inspire and mentor the next Gen of LED' .The forum serves as a catalyst for positive change and aims to promote gender equality, economic empowerment, education, health, and political participation for women worldwide.",
+      desc2: "Join us for the World Summit on Leadership to be held on march 08-09-2027  in Singapore. This is an opportunity to show your passion on a global stage and connect with like-minded individuals who share your commitment to gender equality, economic empowerment, leadership, education, health, and political participation for women worldwide. We believe that by coming together virtually, we can create a powerful force for positive change and make a real impact in the world. We invite you to be a part of this inclusive platform and share your experiences, success stories, and ideas for a more equitable future for all women",
+      sessions: [
+        
+      ],
+      agenda: {
+  day1: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
+    talkTitle: [
+      "Inaugural Session",
+      "Future of Innovation",
+      "Mindfulness in Leadership",
+    ],
+  },
+  day2: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
+    talkTitle: [
+      "Global Perspectives in Science",
+      "Spirituality in Modern Times",
+      "Resilience for Leaders",
+    ],
+  },
+}
+    },
+    {
+      id: 6,
+      title: "3rd world summit on Neurology and Psychology",
+      theme: "Neuroscience & Mental Health: Translating Discoveries into Global Wellness",
+      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      bannerUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuA8ndLzvhJ4UllWgfGmpWRtPEv17dEYx7PAfbemI0_EpWproDxqfGbW81hX47bYeDfiK4lP9_KtfUsrQ1N1bHGd7i8YT1nMB0tk9Q-GeAinRZUsXhSex84m1gdlXq2lzLpTrGy-s0ZV9-PIxPf88NLCrlTutwGpFtk5ggOe-7a8cJNzHaBsAX46ncW6sWr8ceYvxNAFnVhaMsQJpP0G_DWg9oel84de3EqeYtLEFQv9EH3oXo38oGKd6pzziptAX_N6oARrKrv76q1b",
+      location: "Singapore",
+      Date: "March 08-09, 2026",
+      Dates: "2026-03-08",
+      desc1: "ICON STAR  Conferences are excited to invite you to the upcoming 3rd world summit on Neurology and Psychology , a summit that will be held on 08-09 202  in  Singapore. This main theme is“Neuroscience & Mental Health: Translating Discoveries into Global Wellness' . Our goal is to raise awareness about the critical need for action to ensure that populations worldwide have access to proper mental healthcare.",
+      desc2: "During this summit, we will bring together experts, advocates, and stakeholders to discuss the challenges and solutions related to mental health on a global scale. Our hope is to initiate a call to action that prioritizes mental health and well-being as a fundamental aspect of public health.",
+      sessions: [
+        
+      ],
+      agenda: {
+  day1: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Opening Ceremony", "Keynote Speaker", "Dr. Ananya Rao"],
+    talkTitle: [
+      "Inaugural Session",
+      "Future of Innovation",
+      "Mindfulness in Leadership",
+    ],
+  },
+  day2: {
+    time: ["08:00 – 08:30", "08:30 – 09:00", "09:00 – 09:30"],
+    speaker: ["Keynote Speaker", "Sister Meera", "Dr. John Carter"],
+    talkTitle: [
+      "Global Perspectives in Science",
+      "Spirituality in Modern Times",
+      "Resilience for Leaders",
+    ],
+  },
+}
     }
   ])
   return (

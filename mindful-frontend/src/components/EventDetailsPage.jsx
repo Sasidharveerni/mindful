@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import EventBanner from "./EventBanner";
+import AgendaCard from "./AgendaCard";
 
 export default function EventDetailsPage({ mockEvents }) {
   const navigate = useNavigate()
@@ -26,6 +27,8 @@ export default function EventDetailsPage({ mockEvents }) {
     );
   }
 
+  console.log(event)
+
   return (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#fcfaf8] group/design-root overflow-x-hidden"
@@ -42,14 +45,14 @@ export default function EventDetailsPage({ mockEvents }) {
             
             {/* Event Title Section */}
             <div className="flex flex-col gap-4 p-4">
-              <div className="flex flex-col gap-3">
+              {/* <div className="flex flex-col gap-3">
                 <p className="text-[#1b160e] tracking-light text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-bold leading-tight">
                   {event.title}
                 </p>
                 <p className="text-[#977e4e] text-sm sm:text-base font-normal leading-normal">
                   {event.theme}
                 </p>
-              </div>
+              </div> */}
 
               {/* About Event */}
 
@@ -175,6 +178,10 @@ export default function EventDetailsPage({ mockEvents }) {
                 ))}
               </div>
             </div>
+
+            
+              
+              {event.agenda && <AgendaCard agenda={event.agenda} />}
 
             {/* Benefits Section */}
             <h3 className="text-[#1b160e] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">

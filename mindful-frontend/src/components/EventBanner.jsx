@@ -49,6 +49,41 @@ function CountdownTimer({ targetDate }) {
 }
 
 export default function EventBanner({ event }) {
+  const downloadBrochure = () => {
+  // Create link and set attributes
+  const link = document.createElement('a');
+  link.href = '/icon-brochure.pdf';
+  link.download = 'conference-brochure.pdf';
+  link.target = '_blank'; // Fallback for mobile
+  link.rel = 'noopener noreferrer';
+  
+  // Append to body and trigger click
+  document.body.appendChild(link);
+  link.click();
+  
+  // Clean up after a delay
+  setTimeout(() => {
+    document.body.removeChild(link);
+  }, 100);
+};
+
+const downloadAbstract = () => {
+  // Create link and set attributes
+  const link = document.createElement('a');
+  link.href = '/icon-abstract.pdf';
+  link.download = 'conference-abstract.pdf';
+  link.target = '_blank'; // Fallback for mobile
+  link.rel = 'noopener noreferrer';
+  
+  // Append to body and trigger click
+  document.body.appendChild(link);
+  link.click();
+  
+  // Clean up after a delay
+  setTimeout(() => {
+    document.body.removeChild(link);
+  }, 100);
+};
   return (
     <div
       className="relative text-black flex flex-col items-center justify-center px-6 py-16 bg-cover bg-center bg-opacity-80"
@@ -77,10 +112,10 @@ export default function EventBanner({ event }) {
 
         {/* Buttons */}
         <div className="flex justify-center gap-4 mb-6">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2" onClick={() => downloadBrochure()}>
             <FileText className="w-4 h-4" /> Brochure
           </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2" onClick={() => downloadAbstract()}>
             Abstract <ArrowRight className="w-4 h-4" />
           </button>
         </div>
