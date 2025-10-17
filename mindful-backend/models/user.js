@@ -12,27 +12,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    profileImg: {
-        type: String,
-        required: true
-    },
-    isSpeaker: {
-        type: Array,
-        required: true
-    },
-    isAdmin: {
-        type: Boolean,
-        required: true
-    },
-
-    registeredEvents: {
-        type: Array
-    },
+    }
 
 
 })
 
-const user = new mongoose.model('User', userSchema)
+const User =  mongoose.model('User', userSchema)
 
-module.exports = {user}
+module.exports = User
