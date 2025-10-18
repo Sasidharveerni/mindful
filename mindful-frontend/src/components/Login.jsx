@@ -26,7 +26,7 @@ export default function Login() {
     try {
       e.preventDefault();
     console.log("Form Submitted:", formData);
-    const response = await axios.post('http://localhost:3000/login', formData)
+    const response = await axios.post('https://us-central1-iconstar-conference.cloudfunctions.net/api/login', formData)
     if(response.status === 200) {
       alert('You have logged in successfully!')
       localStorage.setItem('iconStarToken', response.data.token)

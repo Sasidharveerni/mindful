@@ -23,7 +23,7 @@ const ViewEvents = () => {
     try {
       setLoading(true);
       
-      const response = await axios.get('http://localhost:3000/view/all/registrations', {
+      const response = await axios.get('https://us-central1-iconstar-conference.cloudfunctions.net/api/view/all/registrations', {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -45,7 +45,7 @@ const ViewEvents = () => {
   const fetchRegistrationById = async (registrationId) => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/view/registration/${registrationId}`, {
+      const response = await axios.get(`https://us-central1-iconstar-conference.cloudfunctions.net/api/view/registration/${registrationId}`, {
         headers: {
             Authorization: `Bearer ${token}`
         }

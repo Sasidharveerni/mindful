@@ -32,7 +32,7 @@ function RegisterEvent({ event, plan, onClose }) {
         setLoading(true)
         
         try {
-            const response = await axios.post('http://localhost:3000/register/event', formData)
+            const response = await axios.post('https://us-central1-iconstar-conference.cloudfunctions.net/api/register/event', formData)
             if (response.status === 200) {
                 alert('Thank you for showing your interest, we will contact you soon!')
                 onClose() // Close the modal after successful registration
