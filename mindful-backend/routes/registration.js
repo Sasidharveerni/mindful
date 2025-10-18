@@ -8,6 +8,15 @@ router.post('/register/event', async (req, res) => {
     try {
         const {name, email, interestedPackage, eventName, paymentCompletion} = req.body
 
+        const existingRegistration = await Registration.findOne({email: email, eventName: eventName, interestedPackage: interestedPackage})
+
+        if(existingRegistration) {
+            return res.status(400).json({
+                status: 'Failed',
+                message: 'You have already registered with this event'
+            })
+        }
+
         const registration = new Registration ({
             name,
             email,
@@ -31,7 +40,7 @@ router.post('/register/event', async (req, res) => {
     }
 })
 
-router.get('/view/all/registration', verifyToken, async (req, res) => {
+router.get('/view/all/registrations', verifyToken, async (req, res) => {
     try {
        const registeredEvents = await Registration.find()
        

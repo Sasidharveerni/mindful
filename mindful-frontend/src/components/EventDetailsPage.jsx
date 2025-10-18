@@ -4,11 +4,22 @@ import Header from "./Header";
 import Footer from "./Footer";
 import EventBanner from "./EventBanner";
 import AgendaCard from "./AgendaCard";
+import RegisterEvent from "./RegisterEvent";
+import { useState } from "react";
 
 export default function EventDetailsPage({ mockEvents }) {
   const navigate = useNavigate()
   // Extract the id from URL parameters
   const { id } = useParams();
+
+  const [showRegistration, setShowRegistration] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState(null)
+
+// When user clicks register button:
+const handleRegisterClick = (plan) => {
+    setSelectedPlan(plan)
+    setShowRegistration(true)
+}
   
   // Find the event with the matching ID
   console.log(id)
@@ -27,7 +38,9 @@ export default function EventDetailsPage({ mockEvents }) {
     );
   }
 
-  console.log(event)
+  console.log(showRegistration)
+
+  
 
   return (
     <div
@@ -181,11 +194,26 @@ export default function EventDetailsPage({ mockEvents }) {
                             </svg>
                           </button>
                       </Link>
+
+                      <button className="mt-4 bg-[#f29e0d] hover:bg-[#e68c00] text-[#1c160d] px-5 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 transition-colors" onClick={() => handleRegisterClick(plan)}>
+                            Interested ?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+                              <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                            </svg>
+                          </button>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+
+            {showRegistration && (
+    <RegisterEvent 
+        event={event} 
+        plan={selectedPlan} 
+        onClose={() => setShowRegistration(false)} 
+    />
+)}
 
             
               

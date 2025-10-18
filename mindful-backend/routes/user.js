@@ -10,7 +10,7 @@ router.post('/register', async (req, res) => {
     try {
         const {name, email, password} = req.body
 
-        const existingUsers = userModel.findOne({email})
+        const existingUsers = await User.findOne({email})
 
         if(existingUsers) {
             return res.status(400).json({
@@ -21,13 +21,13 @@ router.post('/register', async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10)
 
-       const newUser = new userModel({
+       const newUser = new User({
         name,
         email,
         password: hashedPassword
        })
 
-       await userModel.save();
+       await newUser.save();
 
        return res.status(200).json({
         status: 'Success',
@@ -37,7 +37,8 @@ router.post('/register', async (req, res) => {
     } catch (error) {
          return res.status(500).json({
         status: 'Failed',
-        message: 'Internal server error'
+        message: 'Internal server error',
+        err: error.message
        })
 
     }
@@ -47,11 +48,11 @@ router.post('/login', async (req, res) => {
     try {
         const {email, password} = req.body
 
-        const existingUsers = userModel.findOne({email})
+        const existingUsers = await User.findOne({email: email})
 
         if(existingUsers) {
-            const hashedPassword = bcrypt.hash(password, 10)
-            const isPasswordSame = bcrypt.compare(hashedPassword, existingUsers.password)
+            
+            const isPasswordSame = bcrypt.compare(password, existingUsers.password)
             if(isPasswordSame) {
                 const token = jwt.sign({id: existingUsers._id, email: existingUsers.email }, 'secretkey', { expiresIn: '1d'})
             return res.status(200).json({
@@ -66,7 +67,12 @@ router.post('/login', async (req, res) => {
                 message: 'wrong password'
             })
         }
-        } 
+        } else {
+            return res.status(501).json({
+                status: 'Failed',
+                message: 'User does not exist, please sign up'
+            })
+        }
 
         
 
@@ -78,7 +84,8 @@ router.post('/login', async (req, res) => {
     } catch (error) {
          return res.status(500).json({
         status: 'Failed',
-        message: 'Internal server error'
+        message: 'Internal server error',
+        err: error.message
        })
 
     }
@@ -169,7 +176,7 @@ router.delete('/delete-user/:userId', async (req, res) => {
     } catch (error) {
         res.status(501).json({
             message: 'Something went wrong',
-            err: error
+            err: error.message
         });
     }
 })

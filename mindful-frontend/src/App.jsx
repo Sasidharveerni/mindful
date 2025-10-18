@@ -8,6 +8,7 @@ import Login from './components/Login'
 import EventDetailsPage from './components/EventDetailsPage'
 import CreateEvent from './components/CreateEvent'
 import RegistrationPage from './components/RegistrationPage'
+import ViewEvents from './components/ViewEvents'
 
 
 function App() {
@@ -644,6 +645,8 @@ function App() {
         <Route path='/register' element={<RegistrationPage />} />
         <Route path='/eventdetails/:id' element={<EventDetailsPage mockEvents={mockevents} />} />
         <Route path='/createevent' element={<CreateEvent />} />
+        <Route path='/view/registrations' element={<ViewEvents />} />
+        <Route path='/view/registration/:id' element={<ViewEvents />} />
       </Routes>
     </BrowserRouter>
   )

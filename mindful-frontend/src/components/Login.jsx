@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import logo from '../assets/icon-logo.png'
 import Header from "./Header";
+import axios from 'axios'
 
 export default function Login() {
 
@@ -10,7 +11,6 @@ export default function Login() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    confirmPassword: "",
  
   });
 
@@ -22,10 +22,26 @@ export default function Login() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
     console.log("Form Submitted:", formData);
+    const response = await axios.post('http://localhost:3000/login', formData)
+    if(response.status === 200) {
+      alert('You have logged in successfully!')
+      localStorage.setItem('iconStarToken', response.data.token)
+      navigate('/view/registrations')
+    } else {
+      alert("We can't login you now")
+      //console.log(respons)
+    }
+    } catch (error) {
+      alert('There is error in logging in')
+      console.error('Error in logging', error)
+    }
+    
     // Add API call or auth logic here
+    
   };
 
   return (
